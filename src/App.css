@@ -1,14 +1,67 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+.content{
+  display: flex;
+  width:300px;
+  justify-content: space-around;
+  
+}
+.user-rating{
+text-align: right;
+}
+.user-name{
+text-align: left;
+
 }
 
-.user-name{
+.user-name,.user-rating{
+  font-size: 16px;
   font-style:italic;
+
   font-family:'Roboto', sans-serif ;
+  
+}
+.big{
+  font-family: 'Fruktur', cursive;
+  font-weight: bolder;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
 }
 .user-pic{
-  height:200px;
-  width:200px;
-  border-radius: 50%;
+  height:280px;
+  width:230px;
+  border-radius: 10px;
   object-fit: cover;
+  
+}
+.total{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.big{
+  font-weight: bolder;
+}
+.container{
+  border-radius: 10px;
+display: inline-block;
+overflow: hidden;
+    height:440px;
+    width:300px;
+    padding-top: 20px;
+  margin-top:30px;
+  background-color: rgb(189, 194, 199);
+  transition: all 10s;
+}
+.heading{
+  align-items: center;
+  text-align: center;
+}
+.user-summary{
+  width:280px;
+  margin-top: 5px;
 }
