@@ -86,6 +86,7 @@ justify-content: space-between;
   width:50px;
 }
 .hide{
-  margin-left: 0;
-  background-color: rgb(91, 95, 99);
+  background-color: rgb(154, 181, 209);
+  display: flex;
+  justify-content: flex-start;
 }

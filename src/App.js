@@ -1,6 +1,7 @@
 
 import './App.css';
 import { useState } from 'react';
+import {Counter} from "./Counter.js";
 
 
 export default function App() {
@@ -34,46 +35,3 @@ export default function App() {
     </div>
     </div>
   );
-
-function Msg({name,poster,rating,summary}) {
-  const [show,setShow]=useState(true)
-  const styles={color:rating<8?"red":"green",fontWeight:"bold"};
-  const summarystyles={display:show?"block":"none"}
-  //const name = "kausi";
-  return (
-    <div className="container">
-      <img  className="user-pic" src={poster} alt={name}/>
-      <div className="content">
-      <div className="user-name"><h1 className="big">Movie:{name}</h1>
-      <p className="big"  style={styles}>⭐{rating}</p>
-      </div></div>
-      
-      
-        <button onClick={()=>{setShow(!show)}} className="hide" >Hide description</button>
-        <div style= {summarystyles} className="user-summary">
-        {summary}</div>
-      <Counter/>  
-    </div>
-  )
-}
-}
-function Counter(){
-  const[like,setLike]=useState(0);
-  const[dislike,setdisLike]=useState(0);
-  return(
-    <div className="livecounter">
-    <button className="livebutton" onClick={()=>{
-      
-      setLike(like+1);
-     
-      }}>👍{like}</button>
-      
-      <button className="livebutton" onClick={()=>{
-      
-      setdisLike(dislike+1);
-     
-      }}>👎{dislike}</button>
-      
-  </div>
-  );
-}
