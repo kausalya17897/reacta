@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Counter} from "./Counter.js";
   export default function Msg({name,poster,rating,summary}) {
     const [show,setShow]=useState(true)
     const styles={color:rating<8?"red":"green",fontWeight:"bold"};
@@ -20,4 +21,4 @@ import {useState} from "react";
     </div>
   )
 }
-}
+export{Msg}

@@ -1,7 +1,7 @@
 
 import './App.css';
+import { Msg } from "./Msg.js";
 import { useState } from 'react';
-import {Counter} from "./Counter.js";
 
 
 export default function App() {
@@ -29,9 +29,23 @@ export default function App() {
     <Msg 
     name={name} poster={poster} rating={rating} summary={summary}
     />
+    
        
   ))}
-  
+  <Addmovies/>
+    
     </div>
     </div>
-  );
+  );}
+  function Addmovies(){
+    const[poster,setposter]=useState("0");
+    return(
+      <div className="movielist">
+        <input type="url"className="posterimg" value={poster}
+        onchange={(a)=>setposter(a.target.value)}
+         placeholder="enter movie poster url"/>
+        <button onClick={(b)=>setposter({poster})}>Add movieposter</button>
+
+      </div>
+    )
+  }
