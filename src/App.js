@@ -2,6 +2,8 @@
 import './App.css';
 import { Msg } from "./Msg.js";
 import { useState } from 'react';
+import * as React from 'react';
+import Button from '@mui/material/Button';
 
 
 export default function App() {
@@ -38,13 +40,13 @@ export default function App() {
     </div>
   );}
   function Addmovies(){
-    const[poster,setposter]=useState("0");
+    const[poster,setPoster]=useState(0);
     return(
       <div className="movielist">
         <input type="url"className="posterimg" value={poster}
-        onchange={(a)=>setposter(a.target.value)}
+        onChange={(a)=>setPoster(a.target.value)}
          placeholder="enter movie poster url"/>
-        <button onClick={(b)=>setposter({poster})}>Add movieposter</button>
+        <Button onClick={(b)=>setPoster({poster})} variant="outlined">Add movieposter</Button>
 
       </div>
     )

@@ -4,6 +4,7 @@
 
 .title{
   color:black;
+  background-color: brown;
 }
 .movielist{
   display: flex;
