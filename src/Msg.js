@@ -3,7 +3,7 @@ import {Counter} from "./Counter.js";
   export default function Msg({name,poster,rating,summary}) {
     const [show,setShow]=useState(true)
     const styles={color:rating<8?"red":"green",fontWeight:"bold"};
-    const summarystyles={display:show?"block":"none"}
+    const summarystyles={display:show?"block":"none"};
     //const name = "kausi";
     return (
       <div className="container">
@@ -11,7 +11,7 @@ import {Counter} from "./Counter.js";
         <div className="content">
         <div className="user-name"><h1 className="big">Movie:{name}</h1>
         <p className="big"  style={styles}>⭐{rating}</p>
-        </div></div
+        </div></div>
         <button onClick={()=>{setShow(!show)}} className="hide" >Hide description</button>
         <div style= {summarystyles} className="user-summary">
         {summary}</div>

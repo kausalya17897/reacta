@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+.addmovie{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .title{
   color:black;
@@ -95,4 +100,19 @@ justify-content: space-between;
   background-color: rgb(154, 181, 209);
   display: flex;
   justify-content: flex-start;
+}
+.addmovie{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  padding:10px;
+  border:1px solid black;
+margin-left:540px;
+margin-right:540px;
+}
+@media(max-width:360px){
+  .addmovie{
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
