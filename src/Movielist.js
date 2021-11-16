@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import {Msg} from './Msg.js';
 export default function Movielist({ movie }) {
   return (
     <div className="movielist">
@@ -10,3 +10,4 @@ export default function Movielist({ movie }) {
     </div>
   );
 }
+export{Movielist};

@@ -2,7 +2,7 @@
 import './App.css';
 import { useState } from 'react';
 import * as React from 'react';
-import { Movielist } from './Movielist';
+import { Movielist } from './Movielist.js';
 
 
 
@@ -20,29 +20,45 @@ export default function App() {
  
    //const names=["kausi","gova","madhu"];
  //const users=[{name:"kausi",pic:"https://media-exp1.licdn.com/dms/image/D5635AQH7_rDxz244wg/profile-framedphoto-shrink_200_200/0/1622904476145?e=1635930000&v=beta&t=SUMi3zn9MNbeH-YnsgEu6SPYdWfgIda0OElmO1VZeQ8"}
+ const[movies,setMovies]=useState(movie);
+  return (
+    <div className="App">
+      <h1 className="title">Movie list</h1>
+      
+      < AddMovie movie={movie}/>
+     <Movielist movie={movie} />
+   
+    </div>
+  );
+
+  function AddMovie(){
+   
+    const[movies,setMovies]=useState(movie);
  const[name,setName]=useState("");
  const[poster,setPoster]=useState("");
  const[rating,setRating]=useState("");
  const[summary,setSummary]=useState("");
- const[movies,setMovies]=useState(movie);
- const AddMovie=()=>{
-  console.log("adding movie...",name,poster,rating,summary);
+ 
+ const addMovie=()=>{
   const newmovie={
-    name,poster,rating,summary
+    name,
+    poster,
+    rating,
+    summary
   };
+  console.log("adding movie...",name,poster,rating,summary);
+  
   console.log(newmovie);
-  setMovies([...movies,newmovie]);
-};
-  return (
-    <div className="App">
-      <h1 className="title">Movie list</h1>
-      <div>
-      <input value={name}  onChange={(a)=>setName(a.target.value)}type="text" placeholder ="enter movie name"/>
-      <input type="url" value={poster} onChange={(a)=>setPoster(a.target.value)}placeholder="enter movie url"/>
-      <input type="text"value={rating} onChange={(a)=>setRating(a.target.value)}placeholder="rating"/>
-      <input type="text" value={summary}onChange={(a)=>setSummary(a.target.value)} placeholder="summary"/>
-        <button onClick={AddMovie} className="addmoviedetails">Add movie</button></div>
-      
-     <Movielist movie={movie} setMovies={setMovies}/>
+  setMovies(newmovie);
+  console.log("set")
+ }
+return( 
+  <div className="container"><input value={name}  onChange={(a)=>setName(a.target.value)} placeholder ="enter movie name"/>
+  <input  value={poster} onChange={(a)=>setPoster(a.target.value)}placeholder="enter movie url"/>
+  <input value={rating} onChange={(a)=>setRating(a.target.value)}placeholder="rating"/>
+  <input value={summary}onChange={(a)=>setSummary(a.target.value)} placeholder="summary"/>
+    <button onClick={addMovie} className="addmoviedetails">Add movie</button>
     </div>
-  );}
+
+  )
+};}
