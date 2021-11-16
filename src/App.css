@@ -30,8 +30,9 @@
   transition: all 10s;
   }
   .container:hover{
-  transition: all 0.1s;
-    transform:scale(1.1);
+  
+    transition:all 0.3s;
+    transform:scale(1.05);
    
     
   }
@@ -110,9 +111,15 @@ justify-content: space-between;
 margin-left:540px;
 margin-right:540px;
 }
-@media(max-width:360px){
-  .addmovie{
-    margin-left: 40px;
-    margin-right: 40px;
-  }
+
+.add-container{
+  display: flex;
+  flex-direction: column;
+  
+  margin-left: 440px;
+  margin-right:440px;
+  gap:1rem;
+  border: 1px solid black;
+  padding: 10px;
+  
 }

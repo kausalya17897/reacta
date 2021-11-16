@@ -1,7 +1,8 @@
 import {useState} from "react";
 import {Counter} from "./Counter.js";
   export default function Msg({name,poster,rating,summary}) {
-    const [show,setShow]=useState(true)
+    const [show,setShow]=useState(true);
+    //styling
     const styles={color:rating<8?"red":"green",fontWeight:"bold"};
     const summarystyles={display:show?"block":"none"};
     //const name = "kausi";
@@ -16,6 +17,7 @@ import {Counter} from "./Counter.js";
         <div style= {summarystyles} className="user-summary">
         {summary}</div>
       <Counter/>  
+      
     </div>
   )
 }
